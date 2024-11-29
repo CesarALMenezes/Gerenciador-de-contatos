@@ -1,44 +1,68 @@
 Gerenciador de Contatos
 
-Um sistema para cadastrar, listar, atualizar e deletar contatos pessoais/profissionais, com informações adicionais.
+Um sistema para gerenciar contatos pessoais e profissionais. Permite o cadastro, listagem, atualização, exclusão e busca de contatos, com suporte a informações adicionais.
 
-Funcionalidades
+Funcionalidades 
 
-Criar Contato e inserir informações como:
+Criar Contato
+Adicione informações detalhadas sobre cada contato:
 
-- Nome
-- Telefone
-- E-mail
-- Empresa (informação adicional)
-- Aniversário (informação adicional)
+Nome
+Telefone
+E-mail
+Empresa (informação adicional)
+Aniversário (informação adicional)
 
-Listar e exibir contatos registrados.
+Listar Contatos 
 
-Atualizar informações de um contato existente.
+Visualize todos os contatos registrados.
+Exibição formatada dos contatos para facilitar a leitura.
 
-Remover contatos do sistema.
+Atualizar Contato
 
-Buscar Contatos: Permitir que o usuário procure contatos por nome ou empresa. (Funcionalidade extra)
+Altere qualquer informação de um contato existente.
 
+Deletar Contato
+
+Remova contatos do sistema com opção de confirmação para evitar exclusões acidentais.
+
+Buscar Contatos (Funcionalidade Extra)
+Encontre contatos por:
+
+Nome
+Empresa
+
+Encerrar
+
+Encerre o programa.
 
 Detalhes Técnicos
+Estrutura de Arquivo
 
-Utilizar a biblioteca csv para manipulação dos arquivos CSV.
+Os contatos são armazenados em um arquivo CSV chamado dados/contatos.csv.
+Estrutura do arquivo:
 
-O arquivo conterá as seguintes colunas:
+Nome
+Telefone
+E-mail
+Empresa
+Aniversário
 
-- Nome
-- Telefone
-- E-mail
-- Empresa
-- Aniversário
+Implementação
+Foi utilizada a biblioteca csv para leitura, escrita e manipulação do arquivo de dados.
 
-O Menu Principal conterá as opções:
+A estrutura do código foi modularizada em:
 
-- Criar Contato
-- Listar Contatos
-- Atualizar Contato
-- Deletar Contato
-- Buscar Contato
-- Encerrar
+Controladores: para gerenciar as interações do menu com as funcionalidades.
+Funcionalidades: para manipulação lógica de cada operação.
+Serviços: para operações de leitura e escrita no arquivo CSV.
+Menu Principal
+O menu principal apresenta as seguintes opções:
+
+Criar Contato
+Listar Contatos
+Atualizar Contato
+Deletar Contato
+Buscar Contato
+Encerrar
 

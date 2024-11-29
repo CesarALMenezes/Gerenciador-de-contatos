@@ -1,40 +1,39 @@
 from datetime import datetime
+from controladores import criar_contato, listar_contatos, atualizar_contato, deletar_contato
+from os import system
 
-opcoes = [
-        "1 - Criar Contato",
-        "2 - Listar Contatos",
-        "3 - Atualizar Contato",
-        "4 - Deletar Contato",
-        "5 - Buscar Contato",
-        "6 - Encerrar"
+opcoes_menu = [
+    "1 - Listar Contatos",
+    "2 - Criar Contato",
+    "3 - Atualizar Contato",
+    "4 - Deletar Contato",
+    "5 - Encerrar",
 ]
-def menu():
+
+def iniciar_menu():
     while True:
         print("\n- MENU PRINCIPAL -\n")
-
-        for opcao in opcoes:
+        for opcao in opcoes_menu:
             print(opcao)
 
-        escolha = input("\nEscolha uma opção: ")
+        opcao_escolhida = input("\nDigite uma opção: ")
 
-        match escolha:
+        match opcao_escolhida:
             case '1':
-                print("\n** criar_contato **\n")
+                listar_contatos.executar()
             case '2':
-                print("\n** listar_contatos  **\n")
+                criar_contato.executar()
             case '3':
-                print("\n** Atualizar Contato **\n")  
+                atualizar_contato.executar()
             case '4':
-                print("\n** Deletar Contato **\n")  
+                deletar_contato.executar()
             case '5':
-                print("\n** Buscar Contato **\n")  
-            case '6':
-                print("\n** Programa Encerrado **\n")
+                print("\nPrograma encerrado.")
                 break
             case _:
                 print("\nOpção inválida. Tente novamente.")
 
-
 if __name__ == "__main__":
-    print(datetime.now().strftime("%d/%m/%Y, %H:%M"))
-    menu()
+    system('clear')
+    print("\n" + datetime.now().strftime("%d/%m/%Y, %H:%M"))
+    iniciar_menu()
