@@ -1,7 +1,7 @@
 import csv
 
 def executar(contatos):
-    """Atualiza todos os contatos no arquivo CSV."""
+    
     cabecalho = ["id", "nome", "telefone", "email", "empresa", "aniversario"]
     try:
         with open("dados/contatos.csv", "w", newline="", encoding="utf-8") as arquivo:

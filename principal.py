@@ -1,5 +1,5 @@
 from datetime import datetime
-from controladores import criar_contato, listar_contatos, atualizar_contato, deletar_contato
+from controladores import criar_contato, listar_contatos, atualizar_contato, buscar_contato, deletar_contato
 from os import system
 
 opcoes_menu = [
@@ -7,7 +7,8 @@ opcoes_menu = [
     "2 - Criar Contato",
     "3 - Atualizar Contato",
     "4 - Deletar Contato",
-    "5 - Encerrar",
+    "5 - Buscar Contato",
+    "6 - Encerrar"
 ]
 
 def iniciar_menu():
@@ -28,6 +29,9 @@ def iniciar_menu():
             case '4':
                 deletar_contato.executar()
             case '5':
+                buscar_contato.executar()
+
+            case '6':
                 print("\nPrograma encerrado.")
                 break
             case _:
